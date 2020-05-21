@@ -17,7 +17,7 @@ object Q2 extends App{
     }
 
     print("Ticket Price:");val ticket_price = scala.io.StdIn.readInt();
-    printf("Profit fot the ticket price Rs.%d = %d\n",ticket_price,profit(ticket_price));
+    printf("Profit for the ticket price Rs.%d = %d\n",ticket_price,profit(ticket_price));
 
 
 }
