@@ -14,9 +14,9 @@ object ceaserChiper extends App{
 
     def decrypt(c:Char,key:Int,str:String):Char={
         
-        if(str.indexOf(c.toUpper)<6)
+        if(str.indexOf(c.toUpper)<key)
          return str((str.size-key+str.indexOf(c.toUpper))%str.size);
-        else if(c.toUpper==" ")
+        else if(c==' ')
          return c;  
         else
          return str((str.indexOf(c.toUpper)-key)%str.size);
