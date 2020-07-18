@@ -1,6 +1,6 @@
 object ceaserChiper extends App{
 
-    val alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    val alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZsdfs";
     printf("Enter 0 to Encrypt or Enter 1 To Decrypt:");
     val choice = scala.io.StdIn.readInt();
 
