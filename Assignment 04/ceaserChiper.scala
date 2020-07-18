@@ -1,6 +1,6 @@
 object ceaserChiper extends App{
 
-    val alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZsdfs";
+    val alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ ";
     printf("Enter 0 to Encrypt or Enter 1 To Decrypt:");
     val choice = scala.io.StdIn.readInt();
 
@@ -15,7 +15,9 @@ object ceaserChiper extends App{
     def decrypt(c:Char,key:Int,str:String):Char={
         
         if(str.indexOf(c.toUpper)<6)
-         return str((str.size-key+str.indexOf(c.toUpper))%str.size)
+         return str((str.size-key+str.indexOf(c.toUpper))%str.size);
+        else if(c.toUpper==" ")
+         return c;  
         else
          return str((str.indexOf(c.toUpper)-key)%str.size);
         
