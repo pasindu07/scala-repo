@@ -14,13 +14,10 @@ object ceaserChiper extends App{
 
     def decrypt(c:Char,key:Int,str:String):Char={
         
-        if(str.indexOf(c.toUpper)<key)
-         return str((str.size-key+str.indexOf(c.toUpper))%str.size);
-        else if(c==' ')
+        if(c==' ')
          return c;  
-        else
-         return str((str.indexOf(c.toUpper)-key)%str.size);
-        
+
+         return str((str.size-key+str.indexOf(c.toUpper))%str.size);        
     }
 
     def chiper(crypto:(Char,Int,String)=>Char,str:String,key:Int,alpha:String):Any={
