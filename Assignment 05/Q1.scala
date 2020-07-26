@@ -1,6 +1,6 @@
 object Q1 extends App{
     
-    val x = new Rational(3,1);
+    val x = new Rational(3,1); //making an object
     println(x.neg);
 
 }
