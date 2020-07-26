@@ -1,14 +1,15 @@
-class Q1 extends App{
+object Q1 extends App{
     
-    class Rational(x:Int,y:Int){
-        def numer = x;
-        def denom = y;
-
-        def neg = new Rational(-this.numer,this.denom);
-    }
-
     val x = new Rational(3,1);
-
     println(x.neg);
 
 }
+
+class Rational(num1:Int,num2:Int){
+        def numer = num1;
+        def denom = num2;
+
+        def neg = new Rational(-this.numer,this.denom);
+
+        override def toString = numer + "/" + denom;
+    }
