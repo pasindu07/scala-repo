@@ -22,6 +22,28 @@ object Q4 extends App{
     for(x <- negAcc(bank)){
         println(x.nic);
     }
+
+    // val sumOfAllAccounts = (list:List[Account])=>list.reduce((x.accBalance,y.accBalance)=>x.accBalance+y.accBalance);
+
+    // println("Sum of All the Accouts: "+ sumOfAllAccounts);
+
+    // def sumOfAllAccounts(list:List[Account]):Double={
+    //     return list.reduce((x.accBalance,y.accBalance)=>x.accBalance+y.accBalance);
+    // }
+
+    // sumOfAllAccounts(bank);
+
+    def sumofAllAcc(list:List[Account]):Double={
+        var sum = 0.0;
+
+        for(x<-list){
+            sum = sum + x.accBalance;
+        }
+
+        return sum;
+    }
+
+    println(sumofAllAcc(bank));
 }
 
 
