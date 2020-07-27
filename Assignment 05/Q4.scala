@@ -39,11 +39,31 @@ object Q4 extends App{
         for(x<-list){
             sum = sum + x.accBalance;
         }
-
         return sum;
     }
 
     println(sumofAllAcc(bank));
+
+    //TODO: Checking the answers of the functions
+    val postiveAcc = (list:List[Account])=> list.filter(x=>x.accBalance>=0);
+    
+    val intrestAddPositiveAcc = (list:List[Account])=> list.map(x=>x.accBalance+(x.accBalance*1.0005));
+    val intrestAddNegativeAcc = (list:List[Account])=> list.map(x=>x.accBalance-(x.accBalance*0.999));
+
+    def sumofAllAccWithInt(list1:List[Double],list2:List[Double]):Double={
+
+        var sum = 0.0;
+
+        for(x<-list1){
+            sum = sum + x;
+        }
+        for(x<-list2){
+            sum = sum + x;
+        }
+        return sum;
+    }
+
+    println(sumofAllAccWithInt(intrestAddPositiveAcc(postiveAcc(bank)),intrestAddNegativeAcc(negAcc(bank))));
 }
 
 
