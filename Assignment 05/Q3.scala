@@ -1,4 +1,3 @@
-
 class Account(id:String,num:Int,bal:Double){
     val nic:String = id;
     val accNumber:Int = num;
@@ -9,6 +8,7 @@ class Account(id:String,num:Int,bal:Double){
     def deposit(amt:Double) = this.accBalance= this.accBalance+amt;
 
     def tranfer(payee:Account,amount:Double)={
+
         payee.deposit(amount);
         this.withdraw(amount);
         // println(accBalance,payee.accBalance);
