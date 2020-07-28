@@ -1,3 +1,15 @@
+object Q4 extends App{
+
+    val x = new Account("77453V",1111,500);
+    val y = new Account("77454V",1112,100);
+
+    var bank:List[Account] = List(x,y);
+
+    x.tranfer(y,200);
+    println(bank)
+}
+
+
 class Account(id:String,num:Int,bal:Double){
     val nic:String = id;
     val accNumber:Int = num;
