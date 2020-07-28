@@ -15,9 +15,6 @@ object Q4 extends App{
 // val find=(n:String,b:List[Account])=> b.filter(x=>x.nic.equals(n))
     val negAcc = (list:List[Account])=> list.filter(x=>x.accBalance<0);
  
-    // def printList(args: List[_]): Unit = {
-    //     args.foreach(println(args(_)))
-    // }
 
     for(x <- negAcc(bank)){
         println(x.nic);
@@ -47,8 +44,8 @@ object Q4 extends App{
     //TODO: Checking the answers of the functions
     val postiveAcc = (list:List[Account])=> list.filter(x=>x.accBalance>=0);
     
-    val intrestAddPositiveAcc = (list:List[Account])=> list.map(x=>x.accBalance+(x.accBalance*1.0005));
-    val intrestAddNegativeAcc = (list:List[Account])=> list.map(x=>x.accBalance-(x.accBalance*0.999));
+    val intrestAddPositiveAcc = (list:List[Account])=> list.map(x=>x.accBalance*1.0005);
+    val intrestAddNegativeAcc = (list:List[Account])=> list.map(x=>x.accBalance*0.999);
 
     def sumofAllAccWithInt(list1:List[Double],list2:List[Double]):Double={
 
