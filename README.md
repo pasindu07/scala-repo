@@ -1,2 +1,2 @@
 # scala-repo
-Functional Programming
+> Functional Programming
