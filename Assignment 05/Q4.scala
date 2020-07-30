@@ -15,7 +15,7 @@ object Q4 extends App{
 // val find=(n:String,b:List[Account])=> b.filter(x=>x.nic.equals(n))
     val negAcc = (list:List[Account])=> list.filter(x=>x.accBalance<0);
  
-
+    println("Accounts with negative balances");
     for(x <- negAcc(bank)){
         println(x.nic);
     }
@@ -32,7 +32,7 @@ object Q4 extends App{
 
     def sumofAllAcc(list:List[Account]):Double={
         var sum = 0.0;
-
+        printf("%s","Sum of the all accounts: ");
         for(x<-list){
             sum = sum + x.accBalance;
         }
@@ -59,7 +59,7 @@ object Q4 extends App{
         }
         return sum;
     }
-
+    printf("%s","Sum of the all accounts with interest: ");
     println(sumofAllAccWithInt(intrestAddPositiveAcc(postiveAcc(bank)),intrestAddNegativeAcc(negAcc(bank))));
 }
 
