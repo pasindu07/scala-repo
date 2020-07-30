@@ -12,23 +12,12 @@ object Q4 extends App{
     var bank:List[Account] = List(x,y,z,q,r,a,h);
 
 
-// val find=(n:String,b:List[Account])=> b.filter(x=>x.nic.equals(n))
     val negAcc = (list:List[Account])=> list.filter(x=>x.accBalance<0);
  
     println("Accounts with negative balances");
     for(x <- negAcc(bank)){
         println(x.nic);
     }
-
-    // val sumOfAllAccounts = (list:List[Account])=>list.reduce((x.accBalance,y.accBalance)=>x.accBalance+y.accBalance);
-
-    // println("Sum of All the Accouts: "+ sumOfAllAccounts);
-
-    // def sumOfAllAccounts(list:List[Account]):Double={
-    //     return list.reduce((x.accBalance,y.accBalance)=>x.accBalance+y.accBalance);
-    // }
-
-    // sumOfAllAccounts(bank);
 
     def sumofAllAcc(list:List[Account]):Double={
         var sum = 0.0;
@@ -41,7 +30,6 @@ object Q4 extends App{
 
     println(sumofAllAcc(bank));
 
-    //TODO: Checking the answers of the functions
     val postiveAcc = (list:List[Account])=> list.filter(x=>x.accBalance>=0);
     
     val intrestAddPositiveAcc = (list:List[Account])=> list.map(x=>x.accBalance*1.0005);
